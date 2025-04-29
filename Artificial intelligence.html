@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Education Research</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .abstract {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .abstract h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        .video-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .video-box {
+            flex: 1 1 45%;
+            min-width: 300px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .video-box h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .survey-link {
+            margin-top: 15px;
+        }
+        .survey-link label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .survey-link a {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .survey-link a:hover {
+            background: #2980b9;
+        }
+        @media (max-width: 768px) {
+            .video-box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        .language-tabs {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .language-tab {
+            padding: 10px 20px;
+            background: #eee;
+            cursor: pointer;
+            border-radius: 5px 5px 0 0;
+            margin-right: 5px;
+        }
+        .language-tab.active {
+            background: #3498db;
+            color: white;
+        }
+        .abstract-content {
+            display: none;
+        }
+        .abstract-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Artificial Intelligence in Education</h1>
+   
+    <div class="abstract">
+        <div class="language-tabs">
+            <div class="language-tab active" onclick="showAbstract('english')">English</div>
+            <div class="language-tab" onclick="showAbstract('arabic')">العربية</div>
+        </div>
+        
+        <div id="english-abstract" class="abstract-content active">
+            <h2>Abstract</h2>
+            <p>
+                Artificial Intelligence is transforming education through personalized learning, intelligent tutoring systems, and automated administration. This research examines how AI technologies enhance educational outcomes by adapting to individual learning styles, providing real-time feedback, and reducing teacher workload. Key applications include adaptive learning platforms that customize content delivery, AI-powered assessment tools for objective evaluation, and virtual assistants that support both students and educators. The study also addresses challenges such as data privacy concerns, algorithmic bias, and the need for human oversight in AI-driven education. By analyzing current implementations and future trends, this paper provides a framework for integrating AI in educational settings while maintaining pedagogical integrity and equity. The findings suggest that when implemented thoughtfully, AI can significantly improve access to quality education, optimize learning processes, and prepare students for a technology-driven future.
+            </p>
+        </div>
+        
+        <div id="arabic-abstract" class="abstract-content">
+            <h2>ملخص</h2>
+            <p>
+                يُحدث الذكاء الاصطناعي ثورة في المجال التعليمي من خلال أنظمة التعلم الشخصية، والتدريس الذكي، والأتمتة الإدارية. تبحث هذه الدراسة في كيفية تعزيز تقنيات الذكاء الاصطناعي للنتائج التعليمية عبر التكيف مع أنماط التعلم الفردية، وتقديم التغذية الراجعة الفورية، وتخفيف العبء عن المعلمين. تشمل التطبيقات الرئيسية منصات التعلم التكيفي التي تقدم محتوى مخصصًا، وأدوات التقييم الذكية، والمساعدات الافتراضية الداعمة للطلاب والمعلمين. كما تناقش الدراسة التحديات مثل مخاوف الخصوصية، والتحيز الخوارزمي، والحاجة إلى الإشراف البشري في التعليم المعتمد على الذكاء الاصطناعي. من خلال تحليل التطبيقات الحالية والاتجاهات المستقبلية، تقدم هذه الورقة إطارًا لدمج الذكاء الاصطناعي في البيئات التعليمية مع الحفاظ على النزاهة التربوية والمساواة. تشير النتائج إلى أن التطبيق المدروس للذكاء الاصطناعي يمكن أن يحسن بشكل كبير الوصول إلى التعليم الجيد، ويُحسن عمليات التعلم، ويُهيئ الطلاب لمستقبل قائم على التكنولوجيا.
+            </p>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <!-- Video 1 - Arabic Title -->
+        <div class="video-box">
+            <h3>كيف يُحدث الذكاء الاصطناعي ثورة في التعليم</h3>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://studentssoharuniedu-my.sharepoint.com/personal/201321_students_su_edu_om/_layouts/15/embed.aspx?UniqueId=a79088e1-5593-4d80-9530-215807b38380&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+                    frameborder="0"
+                    scrolling="no"
+                    allowfullscreen
+                    title="كيف يُحدث الذكاء الاصطناعي ثورة في التعليم">
+                </iframe>
+            </div>
+            <div class="survey-link">
+                <label>Survey Link in Arabic:</label>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfb-hR57iKwT19U2csENAVfMGnvBq-kL0WIWMOy4uMS-YrGPg/viewform" target="_blank">Take Survey</a>
+            </div>
+        </div>
+
+        <!-- Video 2 - English Title -->
+        <div class="video-box">
+            <h3>AI in Education: Revolutionizing Learning</h3>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://studentssoharuniedu-my.sharepoint.com/personal/201321_students_su_edu_om/_layouts/15/embed.aspx?UniqueId=69ce5e8d-88b9-4e08-9978-7223c89ea4bc&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+                    frameborder="0"
+                    scrolling="no"
+                    allowfullscreen
+                    title="AI in Education: Revolutionizing Learning">
+                </iframe>
+            </div>
+            <div class="survey-link">
+                <label>Survey Link in English:</label>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSchh2dejkPmEtVtljhIsf55IFc0xHadVtbRZZz5Ziff8Y0TTg/viewform" target="_blank">Take Survey</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showAbstract(language) {
+            // Hide all abstract contents
+            document.querySelectorAll('.abstract-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Deactivate all tabs
+            document.querySelectorAll('.language-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Activate selected tab and content
+            document.getElementById(language + '-abstract').classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
